@@ -10,23 +10,43 @@
 // the total price of the packages depending on how much they purchased.
 //  ******************************************************************
 
+// preprocessor directive, includes a header file
+// because we are using the cout object
 #include <iostream>
+using namespace std;
 
-main()
+// beginning of a function
+int main()
 {
-    // double units, total_price, UNIT_PRICE;
+    // variable definitions
+    double unitsOrdered,
+        total_price,
+        UNIT_PRICE = 199.00;
 
-    // cout << "How many units are being purchased? "
-    // cin << units << endl;
-    // UNIT_PRICE = 199.00
+    // output
+    cout << "How many units are being purchased? ";
+    // input
+    cin >> unitsOrdered;
 
-    // total_price = (units * UNIT_PRICE) * (Discount - 100)
-    // write an if-else statement
-    // if cases
     // if it's between 10-19 discount is 20%
+    if (unitsOrdered >= 10 & unitsOrdered <= 19)
+        total_price = (unitsOrdered * UNIT_PRICE) * 0.8;
     // if it's between 20-49 discount is 30%
+    else if (unitsOrdered >= 20 & unitsOrdered <= 49)
+        total_price = (unitsOrdered * UNIT_PRICE) * 0.7;
     // if it's between 50-99 discount is 40%
+    else if (unitsOrdered >= 50 & unitsOrdered <= 99)
+        total_price = (unitsOrdered * UNIT_PRICE) * 0.6;
     // if it's between 100 or more discount is 50%
+    else if (unitsOrdered >= 100)
+        total_price = (unitsOrdered * UNIT_PRICE) * 0.5;
     // else if it's between 0-9 discount is 0%
+    else
+        total_price = unitsOrdered * UNIT_PRICE;
+
+    // output total_price value
+    cout << "Your total price is $" << total_price;
+
+    // usually indicates that the program ran successfully
     return 0;
 }
