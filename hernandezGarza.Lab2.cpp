@@ -20,9 +20,9 @@ int main()
 {
     // variable definitions
     double unitsOrdered,
-        total_price,
+        total_price;
 
-        const double UNIT_PRICE = 199.00;
+    const double UNIT_PRICE = 199.00;
 
     // output
     cout << "How many units are being purchased? ";
