@@ -13,6 +13,8 @@
 // preprocessor directive, includes a header file
 // because we are using the cout object
 #include <iostream>
+#include <iomanip> // header file to use set-precision
+
 using namespace std;
 
 // beginning of a function
@@ -45,8 +47,9 @@ int main()
     else
         total_price = unitsOrdered * UNIT_PRICE;
 
-    // output total_price value
-    cout << "Your total price is $" << total_price;
+    // output total_price value, setprecision makes sure there are
+    // two decimal points.
+    cout << "Your total price is $" << fixed << showpoint << setprecision(2) << total_price;
 
     // usually indicates that the program ran successfully
     return 0;
